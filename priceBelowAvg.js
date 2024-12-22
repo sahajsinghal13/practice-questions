@@ -1,14 +1,23 @@
 // products with a price lower than the average [{name: "item1", price: 10}, {name: "item2", price: 20}, {name: "item3", price: 5}] => [{name: "item1", price: 10}, {name: "item3", price: 5}]
 const calcAverage = function (average, product) {
   average += (product.price / products.length);
-   return average;
- };
+  return average;
+};
+
+const isBelow = function (value) {
+  return function (productDetails) {
+    return productDetails.price < value;
+  }
+}
 
 const filterBelowAveragePrice = function (products) {
   const avg = products.reduce(calcAverage, 0);
-  console.log(avg);
- };
+  const priceBelow = isBelow(avg);
 
-const products = [{name: "item1", price: 10}, {name: "item2", price: 20}, {name: "item3", price: 6}];
+  return products.filter(priceBelow);
+};
 
- filterBelowAveragePrice(products);
+const products = [{ name: "item1", price: 10 }, { name: "item2", price: 20 },
+{ name: "item3", price: 6 }, { name: "item4", price: 12 }];
+
+console.log(filterBelowAveragePrice(products));
