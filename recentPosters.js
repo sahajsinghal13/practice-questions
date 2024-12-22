@@ -8,9 +8,8 @@ const filterRecentActiveUsers = function (users) {
  };
 
  console.log(filterRecentActiveUsers([
-  {username: "alice", lastPostDate: "2024-12-21", active: true}, 
-  {username: "frank", lastPostDate: "2024-12-15", active: true}, 
+  {username: "alice", lastPostDate: "2024-12-21", active: true},
+  {username: "frank", lastPostDate: "2024-12-15", active: true},
   {username: "bob", lastPostDate: "2024-11-20", active: true},
   {username: "alex", lastPostDate: "2024-12-14", active: true}
 ]));
- 
