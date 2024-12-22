@@ -1,5 +1,5 @@
 // count vowels in ["apple", "banana", "grape"] => [2, 3, 2]
-const isVowel = function (char, onlyVowels) {
+const isVowel = function (char) {
   const vowels = 'aeiouAEIOU';
   return vowels.includes(char);
 };
