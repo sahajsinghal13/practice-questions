@@ -7,5 +7,5 @@ const filterHighGrades = function (students) {
   return students.filter(isAbove);
  };
 
- console.log(filterHighGrades([{name: "John", grade: 75}, 
+ console.log(filterHighGrades([{name: "John", grade: 75},
   {name: "Jane", grade: 85}, {name: "Alex", grade: 80}]));
